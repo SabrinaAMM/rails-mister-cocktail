@@ -1,0 +1,8 @@
+
+  <%= simple_form_for(@cocktail) do |f| %>
+    <%= f.error_notification %>
+    <%= f.input :name, placeholder: "Mojito" %>
+    <%= f.input :ingredient, placeholder: "Add ingredient and dose", as: :text %>
+    </div>
+    <%= f.button :submit, class: "btn btn-devise" %>
+  <% end %>
