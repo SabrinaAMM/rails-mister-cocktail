@@ -1,1 +1,8 @@
-<%= render "form", cocktail: @cocktail %>
+
+  <%= simple_form_for(@cocktail) do |f| %>
+    <%= f.input :name, placeholder: "Mojito" %>
+    <%= f.association :doses, as: :text %>
+     <%= f.association :ingredients, as: :check_boxes%>
+    </div>
+    <%= f.button :submit, class: "btn btn-devise" %>
+  <% end %>

@@ -1,1 +1,9 @@
-<%= render "form", dose: @dose %>
+<h1>New Dose</h1>
+
+  <%= simple_form_for [@cocktail, @dose] do |f| %>
+  <%= f.association :ingredient %>
+    <%= f.input :description, placeholder: "Description" %>
+    </div>
+    <%= f.button :submit, class: "btn btn-devise" %>
+  <% end %>
+
